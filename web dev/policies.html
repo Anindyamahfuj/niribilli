@@ -1,0 +1,384 @@
+<!-- policies.html - Services & Policies Page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Niribili | Services & Policies - Bangladesh Tourism</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Additional styles for services & policies page */
+    .policies-header {
+      background: linear-gradient(135deg, #1e3b2c, #2a5e45);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .policies-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .policies-header p {
+      opacity: 0.9;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .services-policies-container {
+      max-width: 1280px;
+      margin: 50px auto;
+      padding: 0 32px;
+    }
+    .section-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+    .service-card, .policy-card {
+      background: white;
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1px solid #f0e7de;
+    }
+    .service-card:hover, .policy-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 32px rgba(0,0,0,0.1);
+    }
+    .service-icon, .policy-icon {
+      font-size: 2.5rem;
+      color: #e67e22;
+      margin-bottom: 20px;
+    }
+    .service-card h3, .policy-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      color: #1e3b2c;
+    }
+    .service-card p, .policy-card p {
+      color: #5a6e6b;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .service-list, .policy-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .service-list li, .policy-list li {
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 1px solid #f5efe8;
+    }
+    .service-list li i, .policy-list li i {
+      color: #e67e22;
+      width: 24px;
+    }
+    .badge-new {
+      background: #e67e22;
+      color: white;
+      font-size: 0.7rem;
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-left: 10px;
+    }
+    .policy-note {
+      background: #fff8e7;
+      border-left: 5px solid #e67e22;
+      padding: 24px 32px;
+      border-radius: 20px;
+      margin-top: 40px;
+    }
+    .faq-section {
+      margin-top: 60px;
+    }
+    .faq-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #1e3b2c;
+    }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 24px;
+    }
+    .faq-item {
+      background: #faf9f8;
+      border-radius: 20px;
+      padding: 24px;
+    }
+    .faq-item h4 {
+      color: #e67e22;
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+    .faq-item p {
+      color: #5a6e6b;
+      line-height: 1.5;
+    }
+    @media (max-width: 768px) {
+      .services-policies-container { padding: 0 20px; }
+      .section-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Niribili<span>✧</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="rent.html">Rent & Book</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cost.html">Cost Calculator</a></li>
+        <li><a href="policies.html" class="active">Services & Policies</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="rent.html" class="btn-book">Book Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="policies-header">
+    <h1><i class="fas fa-handshake"></i> Services & Policies</h1>
+    <p>Transparent, reliable, and customer-first — know what we offer and how we operate</p>
+  </section>
+
+  <div class="services-policies-container">
+    
+    <!-- SERVICES SECTION -->
+    <h2 style="font-size: 1.8rem; margin-bottom: 30px; color: #1e3b2c;"><i class="fas fa-star-of-life"></i> What We Offer</h2>
+    <div class="section-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-bus"></i></div>
+        <h3>Transportation Services</h3>
+        <p>Comfortable and safe travel arrangements across Bangladesh.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check-circle"></i> AC/Non-AC Bus & Car Rental</li>
+          <li><i class="fas fa-check-circle"></i> 4x4 Jeep for Hill Tracks</li>
+          <li><i class="fas fa-check-circle"></i> Boat & Launch Booking</li>
+          <li><i class="fas fa-check-circle"></i> Airport Pickup & Drop</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-hotel"></i></div>
+        <h3>Accommodation Booking</h3>
+        <p>Handpicked stays for every budget and preference.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check-circle"></i> Beachfront Resorts (Cox's Bazar)</li>
+          <li><i class="fas fa-check-circle"></i> Eco Resorts (Sundarbans)</li>
+          <li><i class="fas fa-check-circle"></i> Tribal Homestays (Bandarban)</li>
+          <li><i class="fas fa-check-circle"></i> Budget & Luxury Hotels</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-route"></i></div>
+        <h3>Tour Packages</h3>
+        <p>Pre-designed and custom itineraries for everyone.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check-circle"></i> Group Tours (5-20 people)</li>
+          <li><i class="fas fa-check-circle"></i> Private Customized Trips</li>
+          <li><i class="fas fa-check-circle"></i> Honeymoon Special Packages</li>
+          <li><i class="fas fa-check-circle"></i> Family & Student Tours</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-chalkboard-user"></i></div>
+        <h3>Guide & Support</h3>
+        <p>Experienced local guides for an authentic experience.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check-circle"></i> Licensed Local Guides</li>
+          <li><i class="fas fa-check-circle"></i> Tribal & Cultural Guides</li>
+          <li><i class="fas fa-check-circle"></i> Jungle Safari Experts</li>
+          <li><i class="fas fa-check-circle"></i> 24/7 Customer Support</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-ticket-alt"></i></div>
+        <h3>Ticket & Permit Assistance</h3>
+        <p>Hassle-free documentation and entry arrangements.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check-circle"></i> Bus/Train/Air Ticket Booking</li>
+          <li><i class="fas fa-check-circle"></i> Sundarbans Forest Permit</li>
+          <li><i class="fas fa-check-circle"></i> St. Martin's Ship Ticket</li>
+          <li><i class="fas fa-check-circle"></i> Hill Track Entry Permits</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-umbrella-beach"></i></div>
+        <h3>Activity Arrangements</h3>
+        <p>Make your trip memorable with exciting activities.</p>
+        <ul class="service-list">
+          <li><i class="fas fa-check-circle"></i> Sea Beach & Water Sports</li>
+          <li><i class="fas fa-check-circle"></i> Jungle Trekking & Safari</li>
+          <li><i class="fas fa-check-circle"></i> Campfire & Night Stay</li>
+          <li><i class="fas fa-check-circle"></i> Boat Cruise & Fishing</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- POLICIES SECTION -->
+    <h2 style="font-size: 1.8rem; margin: 50px 0 30px; color: #1e3b2c;"><i class="fas fa-file-contract"></i> Our Policies</h2>
+    <div class="section-grid">
+      <div class="policy-card">
+        <div class="policy-icon"><i class="fas fa-calendar-check"></i></div>
+        <h3>Booking & Confirmation</h3>
+        <ul class="policy-list">
+          <li><i class="fas fa-circle-info"></i> 30% advance payment required for booking</li>
+          <li><i class="fas fa-circle-info"></i> Remaining 70% due 7 days before travel</li>
+          <li><i class="fas fa-circle-info"></i> Booking confirmation within 4 hours</li>
+          <li><i class="fas fa-circle-info"></i> E-ticket & itinerary sent via email/WhatsApp</li>
+        </ul>
+      </div>
+
+      <div class="policy-card">
+        <div class="policy-icon"><i class="fas fa-rotate-left"></i></div>
+        <h3>Cancellation Policy</h3>
+        <ul class="policy-list">
+          <li><i class="fas fa-circle-info"></i> 30+ days before trip: 90% refund</li>
+          <li><i class="fas fa-circle-info"></i> 15-29 days before trip: 70% refund</li>
+          <li><i class="fas fa-circle-info"></i> 7-14 days before trip: 50% refund</li>
+          <li><i class="fas fa-circle-info"></i> Less than 7 days: No refund</li>
+          <li><i class="fas fa-circle-info"></i> Weather-related cancellations: 100% refund</li>
+        </ul>
+      </div>
+
+      <div class="policy-card">
+        <div class="policy-icon"><i class="fas fa-calendar-week"></i></div>
+        <h3>Rescheduling Policy</h3>
+        <ul class="policy-list">
+          <li><i class="fas fa-circle-info"></i> Free reschedule up to 15 days before trip</li>
+          <li><i class="fas fa-circle-info"></i> 500 BDT fee for reschedule within 7-14 days</li>
+          <li><i class="fas fa-circle-info"></i> Reschedule allowed only once per booking</li>
+          <li><i class="fas fa-circle-info"></i> New date must be within 3 months</li>
+        </ul>
+      </div>
+
+      <div class="policy-card">
+        <div class="policy-icon"><i class="fas fa-shield-heart"></i></div>
+        <h3>Safety & Responsibility</h3>
+        <ul class="policy-list">
+          <li><i class="fas fa-circle-info"></i> Travel insurance recommended for all trips</li>
+          <li><i class="fas fa-circle-info"></i> First aid kit available on all tours</li>
+          <li><i class="fas fa-circle-info"></i> Not responsible for lost personal items</li>
+          <li><i class="fas fa-circle-info"></i> Force majeure: alternate arrangements made</li>
+        </ul>
+      </div>
+
+      <div class="policy-card">
+        <div class="policy-icon"><i class="fas fa-child"></i></div>
+        <h3>Child Policy</h3>
+        <ul class="policy-list">
+          <li><i class="fas fa-circle-info"></i> Under 2 years: Free (no seat)</li>
+          <li><i class="fas fa-circle-info"></i> 2-6 years: 50% of package price</li>
+          <li><i class="fas fa-circle-info"></i> 6-12 years: 75% of package price</li>
+          <li><i class="fas fa-circle-info"></i> Above 12 years: Full price</li>
+        </ul>
+      </div>
+
+      <div class="policy-card">
+        <div class="policy-icon"><i class="fas fa-credit-card"></i></div>
+        <h3>Payment Methods</h3>
+        <ul class="policy-list">
+          <li><i class="fas fa-circle-info"></i> bKash / Nagad / Rocket</li>
+          <li><i class="fas fa-circle-info"></i> Bank Transfer (all major banks)</li>
+          <li><i class="fas fa-circle-info"></i> Cash at our Dhaka office</li>
+          <li><i class="fas fa-circle-info"></i> International Card (Visa/Mastercard)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- IMPORTANT NOTE -->
+    <div class="policy-note">
+      <i class="fas fa-gavel" style="font-size: 1.8rem; color: #e67e22; margin-right: 15px; float: left;"></i>
+      <h3 style="margin-bottom: 10px;">Important Terms</h3>
+      <p>All prices are per person in BDT (Bangladeshi Taka) for standard 2-night/3-day packages unless specified otherwise. Group discounts available for 5+ persons. Custom itineraries can be arranged with flexible pricing. For any disputes, the laws of Bangladesh shall apply, and the jurisdiction lies in Dhaka, Bangladesh.</p>
+    </div>
+
+    <!-- FAQ SECTION -->
+    <div class="faq-section">
+      <h2 class="faq-title"><i class="fas fa-question-circle"></i> Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h4><i class="fas fa-clock"></i> What is included in the package?</h4>
+          <p>Transport, accommodation, guide fees, and basic meals as per itinerary. Check individual package details.</p>
+        </div>
+        <div class="faq-item">
+          <h4><i class="fas fa-clock"></i> Can I customize my trip?</h4>
+          <p>Absolutely! Contact us with your preferences and we'll design a personalized itinerary for you.</p>
+        </div>
+        <div class="faq-item">
+          <h4><i class="fas fa-clock"></i> Do you provide travel insurance?</h4>
+          <p>We recommend purchasing travel insurance separately. We can assist with recommendations.</p>
+        </div>
+        <div class="faq-item">
+          <h4><i class="fas fa-clock"></i> How do I confirm my booking?</h4>
+          <p>Pay 30% advance via bKash/Nagad/bank transfer and send us the screenshot. You'll receive confirmation within 4 hours.</p>
+        </div>
+        <div class="faq-item">
+          <h4><i class="fas fa-clock"></i> What if the weather is bad?</h4>
+          <p>We monitor weather conditions. If unsafe, we reschedule or provide 100% refund.</p>
+        </div>
+        <div class="faq-item">
+          <h4><i class="fas fa-clock"></i> Do you offer group discounts?</h4>
+          <p>Yes! Groups of 5+ get 10% off, 10+ get 15% off, and 20+ get 20% off.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+  <div class="footer-container">
+    <div class="footer-col">
+      <h4>Niribili Travels</h4>
+      <p>Explore the soul of Bangladesh.</p>
+      <div class="socials">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick links</h4>
+      <a href="destinations.html">Destinations</a>
+      <a href="packages.html">Tour Packages</a>
+      <a href="rent.html">Rent & Bookings</a>
+      <a href="cost.html">Cost Calculator</a>
+      <a href="policies.html">Services & Policies</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <p>+880 1234 567890</p>
+      <p>hello@niribili.travel</p>
+    </div>
+  </div>
+
+  <!-- COMPANY CONCERN INFORMATION -->
+  <div class="company-concern">
+    <div class="concern-divider"></div>
+    <div class="concern-content">
+      <p class="concern-text"><i class="fas fa-building"></i> NIRIBILLI is a concern of <strong>SAM Company</strong></p>
+      <a href="https://www.samcompany.com" target="_blank" class="concern-link" rel="noopener noreferrer">
+        <i class="fas fa-external-link-alt"></i> Visit SAM Company Website →
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">© 2025 Niribili — responsible & transparent travel</div>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>s

@@ -1,0 +1,139 @@
+<!-- index.html - Homepage with Search -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Niribili | Home - Bangladesh Tourism</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Niribili<span>✧</span></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="rent.html">Rent & Book</a></li>
+        <li><a href="cost.html">Price Distribution</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="policies.html">Services & Policies</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="rent.html" class="btn-book">Book Now</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge">✦ Bangladesh Unfolded ✦</span>
+      <h1>Where the rivers <br>sing & nature blooms</h1>
+      <p>From the world's longest sea beach to emerald tea gardens — experience authentic Bangladesh.</p>
+      <div class="hero-buttons">
+        <a href="destinations.html" class="btn-primary">Explore 20+ Destinations</a>
+        <a href="rent.html" class="btn-outline">Start Your Journey</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="search-section container">
+    <h2>Find Your Perfect Escape</h2>
+    <div class="search-wrapper">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" id="homeSearchInput" placeholder="Search destinations: Cox's Bazar, Sundarbans, Srimangal, Bandarban..." class="search-input">
+      <button id="homeSearchBtn" class="search-btn"><i class="fas fa-arrow-right"></i></button>
+    </div>
+    <div id="homeSearchResults" class="search-results"></div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <h2 class="section-title">Why journey with us?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <i class="fas fa-hiking"></i>
+          <h3>Local Experts</h3>
+          <p>Authentic guides & hidden trails</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-leaf"></i>
+          <h3>Sustainable Travel</h3>
+          <p>Eco-friendly & community first</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-umbrella-beach"></i>
+          <h3>Iconic Destinations</h3>
+          <p>20+ breathtaking places</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-headset"></i>
+          <h3>24/7 Concierge</h3>
+          <p>We're always by your side</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="spotlight">
+    <div class="container">
+      <div class="spotlight-grid">
+        <div class="spotlight-text">
+          <span class="tag">✨ must visit</span>
+          <h2>Sundarbans: The Mangrove Majesty</h2>
+          <p>Home to the Royal Bengal Tiger and mystical waterways, a UNESCO World Heritage site that breathes raw nature.</p>
+          <a href="destinations.html" class="btn-outline small">Discover →</a>
+        </div>
+        <div class="spotlight-img">
+          <img src="https://images.pexels.com/photos/2340970/pexels-photo-2340970.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop" alt="Sundarbans mangrove">
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <footer>
+  <div class="footer-container">
+    <div class="footer-col">
+      <h4>Niribili Travels</h4>
+      <p>Explore the soul of Bangladesh.</p>
+      <div class="socials">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick links</h4>
+      <a href="destinations.html">Destinations</a>
+      <a href="packages.html">Tour Packages</a>
+      <a href="rent.html">Rent & Bookings</a>
+      <a href="cost.html">Cost Calculator</a>
+      <a href="policies.html">Services & Policies</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <p>+880 1234 567890</p>
+      <p>hello@niribili.travel</p>
+    </div>
+  </div>
+
+  <!-- COMPANY CONCERN INFORMATION -->
+  <div class="company-concern">
+    <div class="concern-divider"></div>
+    <div class="concern-content">
+      <p class="concern-text"><i class="fas fa-building"></i> NIRIBILLI is a concern of <strong>SAM Company</strong></p>
+      <a href="https://www.samcompany.com" target="_blank" class="concern-link" rel="noopener noreferrer">
+        <i class="fas fa-external-link-alt"></i> Visit SAM Company Website →
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">© 2025 Niribili — responsible & transparent travel</div>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>
