@@ -1,0 +1,158 @@
+<!-- rent.html - Booking & Rental Form -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Niribili | Rent & Book - Bangladesh Tours</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Niribili<span>✧</span></div>
+      <ul class="nav-links">
+       <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="rent.html">Rent & Book</a></li>
+        <li><a href="cost.html">Price Distribution</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="policies.html">Services & Policies</a></li>
+      </ul>
+      <div class="nav-actions"><a href="rent.html" class="btn-book">Book Now</a></div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <h1>Reserve Your Adventure</h1>
+    <p>Choose a destination or package, fill the form — and we'll craft your perfect trip</p>
+  </section>
+
+  <section class="booking-form-section container">
+    <div class="form-wrapper">
+      <h2>Rental & Tour Booking</h2>
+      <form id="rentalForm">
+        <div class="form-row">
+          <div class="input-group">
+            <label><i class="fas fa-user"></i> Full Name *</label>
+            <input type="text" id="fullname" required placeholder="e.g. Sarah Khan">
+          </div>
+          <div class="input-group">
+            <label><i class="fas fa-envelope"></i> Email *</label>
+            <input type="email" id="email" required placeholder="hello@example.com">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="input-group">
+            <label><i class="fas fa-phone"></i> Phone</label>
+            <input type="tel" id="phone" placeholder="+880 1XXX XXXXXX">
+          </div>
+          <div class="input-group">
+            <label><i class="fas fa-calendar-alt"></i> Travel Date *</label>
+            <input type="date" id="travelDate" required>
+          </div>
+        </div>
+        <div class="input-group full-width">
+          <label><i class="fas fa-map-marked-alt"></i> Select Destination / Package *</label>
+          <select id="packageSelect" required>
+            <option value="">-- Choose your journey --</option>
+            <option value="Cox's Bazar -22,680 ৳">Cox's Bazar (Beach Paradise) - 22,680 ৳</option>
+            <option value="Sundarbans - 	35,880 ৳">Sundarbans (Mangrove Forest) - 	35,880 ৳</option>
+            <option value="Sylhet Tea Gardens - 18,600 ৳">Sylhet Tea Gardens - 18,600 ৳</option>
+            <option value="Bandarban Hill Tracts - 	26,280 ৳">Bandarban Hill Tracts - 	26,280 ৳</option>
+            <option value="Sajek Valley - 29,880 ৳">Sajek Valley (Cloudy Hills) - 29,880 ৳</option>
+            <option value="Rangamati -23,880 ৳">Rangamati (Lake City) - 23,880 ৳</option>
+            <option value="St. Martin's Island - 33,480 ৳">St. Martin's Island (Coral Island) - 33,480 ৳</option>
+            <option value="Kuakata Beach - 20,280 ৳">Kuakata Beach (Sunset & Sunrise) - 20,280 ৳</option>
+            <option value="Srimangal - 21,000 ৳">Srimangal (Tea Capital) - 21,000 ৳</option>
+            <option value="Paharpur Buddhist Vihara - 17,400 ৳">Paharpur Buddhist Vihara (UNESCO) - 17,400 ৳</option>
+            <option value="Mahasthangarh - 16,200 ৳">Mahasthangarh (Ancient City) - 16,200 ৳</option>
+            <option value="Sonargaon - 15,000 ৳">Sonargaon (Old Capital) - 15,000 ৳</option>
+            <option value="Bagerhat - 19,080 ৳">Bagerhat (Sixty Dome Mosque) - 19,080 ৳</option>
+            <option value="Jaflong - 19,800 ৳">Jaflong (Stone & River) - 19,800 ৳</option>
+            <option value="Ratargul Swamp Forest - 17,880 ৳">Ratargul Swamp Forest - 17,880 ৳</option>
+            <option value="Nijhum Dwip - 22,680 ৳">Nijhum Dwip (Deer Island) - 22,680 ৳</option>
+            <option value="Lawachara Rainforest - 16,680 ৳">Lawachara Rainforest - 16,680 ৳</option>
+            <option value="Tanguar Haor - 23,880 ৳">Tanguar Haor (Wetland) - 23,880 ৳</option>
+            <option value="Bisanakandi - $159">Bisanakandi (Border View) - $159</option>
+            <option value="Madhabkunda Waterfall - 23,880 ৳">Madhabkunda Waterfall - 23,880 ৳</option>
+            <option value="Custom Expedition">Custom Expedition (Tell us your dream)</option>
+          </select>
+        </div>
+        <div class="input-group full-width">
+          <label><i class="fas fa-users"></i> Number of travelers</label>
+          <input type="number" id="travelers" min="1" value="2">
+        </div>
+        <div class="input-group full-width">
+          <label><i class="fas fa-comment-dots"></i> Special requests / rental needs (car, guide, hotel, etc.)</label>
+          <textarea id="specialRequests" rows="3" placeholder="e.g., need a 4x4 jeep, private guide, wheelchair access, family package..."></textarea>
+        </div>
+        <button type="submit" class="btn-primary submit-btn"><i class="fas fa-check-circle"></i> Confirm & Request Booking</button>
+        <p class="form-note">* We'll reply within 4 hours with availability & payment options.</p>
+      </form>
+      <div id="formFeedback" class="feedback-message"></div>
+    </div>
+    <div class="booking-info">
+      <div class="info-card">
+        <i class="fas fa-shield-alt"></i>
+        <h4>Secure booking</h4>
+        <p>Your data is encrypted. No hidden fees.</p>
+      </div>
+      <div class="info-card">
+        <i class="fas fa-headset"></i>
+        <h4>Personal trip designer</h4>
+        <p>We customize every detail for you.</p>
+      </div>
+      <div class="info-card">
+        <i class="fas fa-car"></i>
+        <h4>Rental options</h4>
+        <p>Car, bus, boat, or guide — we arrange it all.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+  <div class="footer-container">
+    <div class="footer-col">
+      <h4>Niribili Travels</h4>
+      <p>Explore the soul of Bangladesh.</p>
+      <div class="socials">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick links</h4>
+      <a href="destinations.html">Destinations</a>
+      <a href="packages.html">Tour Packages</a>
+      <a href="rent.html">Rent & Bookings</a>
+      <a href="cost.html">Cost Calculator</a>
+      <a href="policies.html">Services & Policies</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <p>+880 1234 567890</p>
+      <p>hello@niribili.travel</p>
+    </div>
+  </div>
+
+  <!-- COMPANY CONCERN INFORMATION -->
+  <div class="company-concern">
+    <div class="concern-divider"></div>
+    <div class="concern-content">
+      <p class="concern-text"><i class="fas fa-building"></i> NIRIBILLI is a concern of <strong>SAM Company</strong></p>
+      <a href="https://www.samcompany.com" target="_blank" class="concern-link" rel="noopener noreferrer">
+        <i class="fas fa-external-link-alt"></i> Visit SAM Company Website →
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">© 2025 Niribili — responsible & transparent travel</div>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>
