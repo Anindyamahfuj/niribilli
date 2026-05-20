@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #ffffff;
+  background: #678d7a;
   color: #1e2a2f;
   line-height: 1.45;
 }
@@ -20,12 +20,12 @@ body {
 
 /* ===== NAVIGATION ===== */
 .navbar {
-  background: white;
+  background: rgb(245, 219, 70);
   box-shadow: 0 2px 20px rgba(0,0,0,0.02);
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid #efefef;
+  border-bottom: 1px solid #063d12;
 }
 
 .nav-container {
@@ -83,8 +83,9 @@ body {
 }
 
 /* Hero Section */
+/* Hero Section with Background Image */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.pexels.com/photos/13188873/pexels-photo-13188873.jpeg?auto=compress&cs=tinysrgb&w=1600&h=700&fit=crop');
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-fall-nature-scenery-free-image.jpeg?w=2210&quality=70');
   background-size: cover;
   background-position: center 30%;
   min-height: 85vh;
@@ -93,11 +94,13 @@ body {
   position: relative;
   color: white;
 }
+
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.35);
 }
+
 .hero-content {
   position: relative;
   max-width: 650px;
@@ -567,7 +570,7 @@ footer {
 .page-header {
   text-align: center;
   padding: 60px 20px 20px;
-  background: #fefbf5;
+  background: #0f5206;
 }
 @media (max-width: 780px) {
   .nav-container { flex-direction: column; }
