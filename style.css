@@ -570,7 +570,7 @@ footer {
 .page-header {
   text-align: center;
   padding: 60px 20px 20px;
-  background: #0f5206;
+  background: #7ee970;
 }
 @media (max-width: 780px) {
   .nav-container { flex-direction: column; }
