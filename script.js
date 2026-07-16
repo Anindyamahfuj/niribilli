@@ -3,28 +3,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // ========== 20+ DESTINATIONS DATABASE WITH WORKING IMAGES ==========
   const destinations = [
-   const costData = [
-  { name: "Cox's Bazar", region: "Chittagong", transport: 6000, hotel: 6000, food: 3000, local: 2000, guide: 1000, price: 22000 },
-  { name: "Sundarbans", region: "Khulna", transport: 8000, hotel: 8000, food: 4000, local: 3000, guide: 1600, price: 29000 },
-  { name: "Sylhet", region: "Sylhet", transport: 5000, hotel: 5000, food: 2400, local: 1600, guide: 800, price: 18000 },
-  { name: "Bandarban", region: "Hill Tracts", transport: 7000, hotel: 6400, food: 3000, local: 2400, guide: 1000, price: 24000 },
-  { name: "Sajek Valley", region: "Rangamati", transport: 7600, hotel: 7000, food: 3200, local: 2600, guide: 1200, price: 27000 },
-  { name: "Rangamati", region: "Hill Tracts", transport: 6400, hotel: 5600, food: 2800, local: 2000, guide: 900, price: 21000 },
-  { name: "St. Martin's Island", region: "Bay of Bengal", transport: 10000, hotel: 9000, food: 4000, local: 3000, guide: 1400, price: 32000 },
-  { name: "Kuakata Beach", region: "Barisal", transport: 5600, hotel: 5000, food: 2600, local: 1800, guide: 800, price: 19000 },
-  { name: "Srimangal", region: "Sylhet", transport: 4800, hotel: 4600, food: 2200, local: 1400, guide: 800, price: 17000 },
-  { name: "Paharpur", region: "Naogaon", transport: 4400, hotel: 4000, food: 2000, local: 1600, guide: 800, price: 16000 },
-  { name: "Mahasthangarh", region: "Bogra", transport: 4000, hotel: 3600, food: 1800, local: 1400, guide: 700, price: 15000 },
-  { name: "Sonargaon", region: "Dhaka", transport: 3000, hotel: 3200, food: 1600, local: 1000, guide: 600, price: 13000 },
-  { name: "Bagerhat", region: "Khulna", transport: 4600, hotel: 4200, food: 2000, local: 1600, guide: 800, price: 17000 },
-  { name: "Jaflong", region: "Sylhet", transport: 5200, hotel: 4800, food: 2200, local: 1600, guide: 800, price: 18000 },
-  { name: "Ratargul", region: "Sylhet", transport: 4400, hotel: 4000, food: 2000, local: 1400, guide: 800, price: 16000 },
-  { name: "Nijhum Dwip", region: "Noakhali", transport: 6000, hotel: 5600, food: 2600, local: 2000, guide: 900, price: 21000 },
-  { name: "Lawachara", region: "Sylhet", transport: 4000, hotel: 3600, food: 1800, local: 1200, guide: 700, price: 15000 },
-  { name: "Tanguar Haor", region: "Sunamganj", transport: 7000, hotel: 6000, food: 2800, local: 2000, guide: 1000, price: 23000 },
-  { name: "Bisanakandi", region: "Sylhet", transport: 5200, hotel: 4800, food: 2200, local: 1600, guide: 800, price: 18000 },
-  { name: "Madhabkunda", region: "Moulvibazar", transport: 4000, hotel: 3600, food: 1800, local: 1400, guide: 700, price: 15000 }
-];
+    { name: "Cox's Bazar", region: "Chittagong", price: 22000, image: "https://images.pexels.com/photos/18211668/pexels-photo-18211668/free-photo-of-sunset-over-beach-with-people-walking-and-palm-trees.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "World's longest natural sea beach with golden sands" },
+    { name: "Sundarbans", region: "Khulna", price: 29000, image: "https://images.pexels.com/photos/2340970/pexels-photo-2340970.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "Mangrove forest & Royal Bengal Tiger sanctuary" },
+    { name: "Sylhet", region: "Sylhet", price: 18000, image: "https://images.pexels.com/photos/17322299/pexels-photo-17322299/free-photo-of-sylhet-tea-garden.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "Rolling tea estates & misty hills" },
+    { name: "Bandarban", region: "Hill Tracts", price: 24000, image: "https://images.pexels.com/photos/8795752/pexels-photo-8795752.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "Hill tracts, Nilgiri mountains & indigenous culture" },
+    { name: "Sajek Valley", region: "Rangamati", price: 27000, image: "https://images.pexels.com/photos/1619681/pexels-photo-1619681.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "Cloud-kissing hills & serene landscapes" },
+    { name: "Rangamati", region: "Hill Tracts", price: 21000, image: "https://images.pexels.com/photos/13713643/pexels-photo-13713643.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "Kaptai Lake & tribal handicrafts" },
+    { name: "St. Martin's Island", region: "Bay of Bengal", price: 32000, image: "https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "Coral island & blue waters" },
+    { name: "Kuakata Beach", region: "Barisal", price: 19000, image: "https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "Where sun rises and sets over the sea" },
+    { name: "Srimangal", region: "Sylhet", price: 17000, image: "https://images.pexels.com/photos/1698897/pexels-photo-1698897.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "Tea capital & Lawachara rainforest" },
+    { name: "Paharpur", region: "Naogaon", price: 16000, image: "https://images.pexels.com/photos/1194233/pexels-photo-1194233.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "UNESCO Buddhist Vihara" },
+    { name: "Mahasthangarh", region: "Bogra", price: 15000, image: "https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "Ancient city ruins from 3rd century BC" },
+    { name: "Sonargaon", region: "Dhaka", price: 13000, image: "https://images.pexels.com/photos/1698897/pexels-photo-1698897.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "Old capital & folk art museum" },
+    { name: "Bagerhat", region: "Khulna", price: 17000, image: "https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "Sixty Dome Mosque (UNESCO)" },
+    { name: "Jaflong", region: "Sylhet", price: 18000, image: "https://images.pexels.com/photos/1698897/pexels-photo-1698897.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "Stone collection & Dawki river view" },
+    { name: "Ratargul", region: "Sylhet", price: 16000, image: "https://images.pexels.com/photos/2340970/pexels-photo-2340970.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "Freshwater swamp forest" },
+    { name: "Nijhum Dwip", region: "Noakhali", price: 21000, image: "https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "Deer island & mangrove forest" },
+    { name: "Lawachara", region: "Sylhet", price: 15000, image: "https://images.pexels.com/photos/2340970/pexels-photo-2340970.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "Rainforest & gibbon sanctuary" },
+    { name: "Tanguar Haor", region: "Sunamganj", price: 23000, image: "https://images.pexels.com/photos/1619681/pexels-photo-1619681.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "Ramsar wetland & migratory birds" },
+    { name: "Bisanakandi", region: "Sylhet", price: 18000, image: "https://images.pexels.com/photos/1698897/pexels-photo-1698897.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "Border view with India & rocky streams" },
+    { name: "Madhabkunda", region: "Moulvibazar", price: 15000, image: "https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "Waterfall & lush greenery" }
+  ];
 
   // ========== RENDER DESTINATIONS ON DESTINATIONS PAGE ==========
   function renderDestinations(filterText = '') {
@@ -101,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <img src="${d.image}" alt="${d.name}" class="search-result-img" onerror="this.src='https://placehold.co/60x60/e67e22/white?text=${encodeURIComponent(d.name.charAt(0))}'">
             <div class="search-result-info">
               <h4>${d.name}</h4>
-              <p>${d.region} | from $${d.price}</p>
+              <p>${d.region} | from ৳${d.price}</p>
             </div>
           </div>
           <a href="rent.html" class="order-now-small order-from-search" data-dest="${d.name}">Order Now →</a>
@@ -201,7 +200,6 @@ document.addEventListener('DOMContentLoaded', function() {
   setupHomeSearch();
   setupDestSearch();
 });
-
 
 // ============================================
 // 50X BETTER – NIRIBILI TRAVELS FEATURES
