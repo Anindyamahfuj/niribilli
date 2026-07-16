@@ -3,27 +3,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // ========== 20+ DESTINATIONS DATABASE WITH WORKING IMAGES ==========
   const destinations = [
-    { name: "Cox's Bazar", region: "Chittagong", price: 11000, image: "https://media.istockphoto.com/id/1214282986/photo/most-beautiful-paddy-land-along-the-worlds-longest-stretch-of-beach-coxs-bazar-bangladesh.jpg?s=612x612&w=0&k=20&c=9cdaWwYHRRjU0ELX8vS6q9cIwiuXdfaxSBlRdJav20I=", description: "World's longest natural sea beach with golden sands" },
-    { name: "Sundarbans", region: "Khulna", price: 14500, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpZ-ThwJ7Ya5aBOLO0QQp2Bn8cY41oo0xs5Q&s", description: "Mangrove forest & Royal Bengal Tiger sanctuary" },
-    { name: "Sylhet", region: "Sylhet", price: 9000, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQapOzM07Vd9Y-wkZ_r4a8k95E8wh2vT6Ch_g&s", description: "Rolling tea estates & misty hills" },
-    { name: "Bandarban", region: "Chittagong Hill Tracts", price: 12000, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhuFx9aTWsez-HW0zwf5uD7_HMg5eevFP3qQ&s", description: "Hill tracts, Nilgiri mountains & indigenous culture" },
-    { name: "Sajek Valley", region: "Rangamati", price: 13500, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5Tf7zVXBHJHlSCwnrqrCt9I0x3UCLHLBwqA&s", description: "Cloud-kissing hills & serene landscapes" },
-    { name: "Rangamati", region: "Chittagong Hill Tracts", price: 10500, image: "https://thefe-bd.sgp1.cdn.digitaloceanspaces.com/posts/12659/7a.jpg", description: "Kaptai Lake & tribal handicrafts" },
-    { name: "St. Martin's Island", region: "Bay of Bengal", price: 16000, image: "https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "Coral island & blue waters" },
-    { name: "Kuakata Beach", region: "Barisal", price: 9500, image: "https://traveltips.ezyro.com/wp-content/uploads/2023/03/Attractive-places-in-Kuakata.jpg", description: "Where sun rises and sets over the sea" },
-    { name: "Srimangal", region: "Sylhet", price: 8500, image: "https://www.digitalit-inst.com/dm/wp-content/uploads/2023/12/Sreemangaltour.jpg", description: "Tea capital & Lawachara rainforest" },
-    { name: "Paharpur", region: "Naogaon", price: 8000, image: "https://media-cdn.tripadvisor.com/media/photo-s/04/c3/86/03/paharpur-buddhist-monastery.jpg", description: "UNESCO Buddhist Vihara" },
-    { name: "Mahasthangarh", region: "Bogra", price: 7500, image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/0b/b6/b8/mahasthangarh-bengali.jpg?w=700&h=700&s=1", description: "Ancient city ruins from 3rd century BC" },
-    { name: "Sonargaon", region: "Dhaka", price: 6500, image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/e6/95/9b/new-look-of-sonarga-after.jpg?w=900&h=500&s=1", description: "Old capital & folk art museum" },
-    { name: "Bagerhat", region: "Khulna", price: 8500, image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKU6FMsZ_XBsXb4XLMonKBsmOHgzohIIh1Zw&s", description: "Sixty Dome Mosque (UNESCO)" },
-    { name: "Jaflong", region: "Sylhet", price: 9000, image: "https://grandsylhet.com/wp-content/uploads/2025/04/Panthumai-Waterfall-2k-768x403.webp", description: "Stone collection & Dawki river view" },
-    { name: "Ratargul", region: "Sylhet", price: 8000, image: "https://static.wixstatic.com/media/b9965b_f870463851e049dba796d9ea354cb29e~mv2.jpg/v1/fill/w_568,h_426,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/b9965b_f870463851e049dba796d9ea354cb29e~mv2.jpg", description: "Freshwater swamp forest" },
-    { name: "Nijhum Dwip", region: "Noakhali", price: 10500, image: "https://www.touristplaces.com.bd/images/bp/p2297swa.jpeg", description: "Deer island & mangrove forest" },
-    { name: "Lawachara", region: "Sylhet", price: 7500, image: "https://www.laurewanders.com/wp-content/uploads/2023/02/Lawachara-National-Park-11.jpg", description: "Rainforest & gibbon sanctuary" },
-    { name: "Tanguar Haor", region: "Sunamganj", price: 11500, image: "https://www.travelmate.com.bd/wp-content/uploads/2019/06/Tanguar-Haor-Sunamganj-1024x683.jpg.webp", description: "Ramsar wetland & migratory birds" },
-    { name: "Bisanakandi", region: "Sylhet", price: 9000, image: "https://dailyasianage.com/library/15188042912fe461ed0167f58559527e680f93dc08.jpg", description: "Border view with India & rocky streams" },
-    { name: "Madhabkunda", region: "Moulvibazar", price: 7500, image: "https://dailyasianage.com/library/1611944844Madhabkunda_waterfall_Nhasive2-626x365.jpg", description: "Waterfall & lush greenery" }
-  ];
+   const costData = [
+  { name: "Cox's Bazar", region: "Chittagong", transport: 6000, hotel: 6000, food: 3000, local: 2000, guide: 1000, price: 22000 },
+  { name: "Sundarbans", region: "Khulna", transport: 8000, hotel: 8000, food: 4000, local: 3000, guide: 1600, price: 29000 },
+  { name: "Sylhet", region: "Sylhet", transport: 5000, hotel: 5000, food: 2400, local: 1600, guide: 800, price: 18000 },
+  { name: "Bandarban", region: "Hill Tracts", transport: 7000, hotel: 6400, food: 3000, local: 2400, guide: 1000, price: 24000 },
+  { name: "Sajek Valley", region: "Rangamati", transport: 7600, hotel: 7000, food: 3200, local: 2600, guide: 1200, price: 27000 },
+  { name: "Rangamati", region: "Hill Tracts", transport: 6400, hotel: 5600, food: 2800, local: 2000, guide: 900, price: 21000 },
+  { name: "St. Martin's Island", region: "Bay of Bengal", transport: 10000, hotel: 9000, food: 4000, local: 3000, guide: 1400, price: 32000 },
+  { name: "Kuakata Beach", region: "Barisal", transport: 5600, hotel: 5000, food: 2600, local: 1800, guide: 800, price: 19000 },
+  { name: "Srimangal", region: "Sylhet", transport: 4800, hotel: 4600, food: 2200, local: 1400, guide: 800, price: 17000 },
+  { name: "Paharpur", region: "Naogaon", transport: 4400, hotel: 4000, food: 2000, local: 1600, guide: 800, price: 16000 },
+  { name: "Mahasthangarh", region: "Bogra", transport: 4000, hotel: 3600, food: 1800, local: 1400, guide: 700, price: 15000 },
+  { name: "Sonargaon", region: "Dhaka", transport: 3000, hotel: 3200, food: 1600, local: 1000, guide: 600, price: 13000 },
+  { name: "Bagerhat", region: "Khulna", transport: 4600, hotel: 4200, food: 2000, local: 1600, guide: 800, price: 17000 },
+  { name: "Jaflong", region: "Sylhet", transport: 5200, hotel: 4800, food: 2200, local: 1600, guide: 800, price: 18000 },
+  { name: "Ratargul", region: "Sylhet", transport: 4400, hotel: 4000, food: 2000, local: 1400, guide: 800, price: 16000 },
+  { name: "Nijhum Dwip", region: "Noakhali", transport: 6000, hotel: 5600, food: 2600, local: 2000, guide: 900, price: 21000 },
+  { name: "Lawachara", region: "Sylhet", transport: 4000, hotel: 3600, food: 1800, local: 1200, guide: 700, price: 15000 },
+  { name: "Tanguar Haor", region: "Sunamganj", transport: 7000, hotel: 6000, food: 2800, local: 2000, guide: 1000, price: 23000 },
+  { name: "Bisanakandi", region: "Sylhet", transport: 5200, hotel: 4800, food: 2200, local: 1600, guide: 800, price: 18000 },
+  { name: "Madhabkunda", region: "Moulvibazar", transport: 4000, hotel: 3600, food: 1800, local: 1400, guide: 700, price: 15000 }
+];
 
   // ========== RENDER DESTINATIONS ON DESTINATIONS PAGE ==========
   function renderDestinations(filterText = '') {
