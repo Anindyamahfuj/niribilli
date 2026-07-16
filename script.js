@@ -201,3 +201,137 @@ document.addEventListener('DOMContentLoaded', function() {
   setupHomeSearch();
   setupDestSearch();
 });
+
+
+// ============================================
+// 50X BETTER – NIRIBILI TRAVELS FEATURES
+// ============================================
+
+// 1. LEAD POPUP
+document.addEventListener('DOMContentLoaded', function() {
+    const leadTriggers = document.querySelectorAll('#leadTrigger');
+    const leadPopup = document.getElementById('leadPopup');
+    const leadClose = document.getElementById('leadClose');
+    const leadForm = document.getElementById('leadForm');
+
+    if (leadPopup) {
+        function openPopup() {
+            if (localStorage.getItem('leadCaptured') === 'true') {
+                showToast('✅ You are already subscribed!', 'success');
+                return;
+            }
+            leadPopup.classList.add('show');
+        }
+
+        leadTriggers.forEach(btn => btn.addEventListener('click', openPopup));
+
+        if (leadClose) {
+            leadClose.addEventListener('click', function() {
+                leadPopup.classList.remove('show');
+            });
+        }
+
+        leadPopup.addEventListener('click', function(e) {
+            if (e.target === this) this.classList.remove('show');
+        });
+
+        if (leadForm) {
+            leadForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const name = document.getElementById('leadName')?.value.trim();
+                const email = document.getElementById('leadEmail')?.value.trim();
+                if (!name || !email || !email.includes('@')) {
+                    showToast('⚠️ Please fill in all fields correctly.', 'error');
+                    return;
+                }
+                localStorage.setItem('leadCaptured', 'true');
+                localStorage.setItem('leadName', name);
+                localStorage.setItem('leadEmail', email);
+                this.innerHTML = '<p style="color:#D4AF37;font-size:1.2rem;">✅ Thank you! You\'ll get travel deals.</p>';
+                setTimeout(() => {
+                    leadPopup.classList.remove('show');
+                    showToast('✈️ Welcome to Niribili Travels!', 'success');
+                }, 1500);
+            });
+        }
+    }
+});
+
+// 2. TRIP COST CALCULATOR
+document.getElementById('calcBtn')?.addEventListener('click', function() {
+    const dest = document.getElementById('calcDestination').value;
+    const days = parseInt(document.getElementById('calcDays').value) || 1;
+    const travelers = parseInt(document.getElementById('calcTravelers').value) || 1;
+    const budget = parseInt(document.getElementById('calcBudget').value) || 1000;
+    
+    const baseCosts = {
+        coxsbazar: 800,
+        sundarbans: 1200,
+        sylhet: 600,
+        bandarban: 900,
+        sajek: 1100
+    };
+    const base = baseCosts[dest] || 800;
+    const total = (base + budget) * days * travelers;
+    const perPerson = total / travelers;
+    const daily = total / days;
+    
+    document.getElementById('totalCost').textContent = total.toLocaleString() + ' ৳';
+    document.getElementById('perPersonCost').textContent = perPerson.toLocaleString() + ' ৳';
+    document.getElementById('dailyBudget').textContent = daily.toLocaleString() + ' ৳';
+});
+
+// 3. ITINERARY BUILDER
+let itineraryItems = [];
+document.getElementById('itrAddBtn')?.addEventListener('click', function() {
+    const day = document.getElementById('itrDay').value.trim();
+    const activity = document.getElementById('itrActivity').value.trim();
+    if (!day || !activity) {
+        showToast('⚠️ Please fill in both fields.', 'error');
+        return;
+    }
+    itineraryItems.push({ day, activity });
+    renderItinerary();
+    document.getElementById('itrDay').value = '';
+    document.getElementById('itrActivity').value = '';
+    showToast('✅ Activity added to itinerary!', 'success');
+});
+
+function renderItinerary() {
+    const list = document.getElementById('itrList');
+    if (itineraryItems.length === 0) {
+        list.innerHTML = '<p style="color:#888;">Your itinerary will appear here.</p>';
+        return;
+    }
+    list.innerHTML = itineraryItems.map((item, i) => `
+        <div class="itinerary-item">
+            <span><strong>${item.day}</strong> – ${item.activity}</span>
+            <span class="itr-remove" onclick="removeItinerary(${i})">&times;</span>
+        </div>
+    `).join('');
+}
+
+function removeItinerary(index) {
+    itineraryItems.splice(index, 1);
+    renderItinerary();
+    showToast('🗑️ Activity removed', 'info');
+}
+
+document.getElementById('itrShareBtn')?.addEventListener('click', function() {
+    if (itineraryItems.length === 0) {
+        showToast('⚠️ Add some activities first!', 'error');
+        return;
+    }
+    const text = itineraryItems.map(i => `${i.day}: ${i.activity}`).join('\n');
+    const url = `https://wa.me/?text=${encodeURIComponent('My Niribili Travel Itinerary:\n' + text)}`;
+    window.open(url, '_blank');
+    showToast('📤 Sharing itinerary...', 'info');
+});
+
+// 4. CURRENCY CONVERTER
+document.getElementById('curConvertBtn')?.addEventListener('click', function() {
+    const amount = parseFloat(document.getElementById('curAmount').value) || 0;
+    const from = document.getElementById('curFrom').value;
+    const to = document.getElementById('curTo').value;
+    
+    const rates = { BDT: 
