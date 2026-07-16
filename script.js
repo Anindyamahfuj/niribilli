@@ -334,4 +334,66 @@ document.getElementById('curConvertBtn')?.addEventListener('click', function() {
     const from = document.getElementById('curFrom').value;
     const to = document.getElementById('curTo').value;
     
-    const rates = { BDT: 
+    const rates = { BDT: 1, USD: 0.0082, GBP: 0.0065, EUR: 0.0076 };
+    const result = (amount / rates[from]) * rates[to];
+    document.getElementById('curResult').textContent = result.toFixed(2) + ' ' + to;
+});
+
+// 5. BACK TO TOP
+window.addEventListener('scroll', function() {
+    const backBtn = document.getElementById('backToTop');
+    if (backBtn) {
+        if (window.scrollY > 300) {
+            backBtn.classList.add('show');
+        } else {
+            backBtn.classList.remove('show');
+        }
+    }
+});
+document.getElementById('backToTop')?.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// 6. SCROLL PROGRESS
+window.addEventListener('scroll', function() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = (scrollTop / docHeight) * 100;
+    const progressBar = document.getElementById('scrollProgress');
+    if (progressBar) progressBar.style.width = progress + '%';
+});
+
+// 7. THEME TOGGLE
+const themeToggle = document.getElementById('themeToggle');
+if (themeToggle) {
+    const currentTheme = localStorage.getItem('niribiliTheme');
+    if (currentTheme === 'light') {
+        document.body.classList.add('light-mode');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+    themeToggle.addEventListener('click', function() {
+        document.body.classList.toggle('light-mode');
+        if (document.body.classList.contains('light-mode')) {
+            localStorage.setItem('niribiliTheme', 'light');
+            this.innerHTML = '<i class="fas fa-sun"></i>';
+            showToast('🌞 Light mode activated', 'info');
+        } else {
+            localStorage.setItem('niribiliTheme', 'dark');
+            this.innerHTML = '<i class="fas fa-moon"></i>';
+            showToast('🌙 Dark mode activated', 'info');
+        }
+    });
+}
+
+// 8. TOAST FUNCTION
+function showToast(message, type = 'info') {
+    const container = document.getElementById('toastContainer');
+    if (!container) return;
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    toast.textContent = message;
+    container.appendChild(toast);
+    setTimeout(() => toast.remove(), 4000);
+}
+
+console.log('🚀 50X Better – Niribili Travels features loaded!');
