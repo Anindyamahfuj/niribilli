@@ -775,3 +775,353 @@ footer {
 body.light-mode { background: #f5f5f5; color: #1a1a1a; }
 body.light-mode .navbar { background: rgba(255,255,255,0.98); border-bottom: 1px solid #e0dcd2; }
 body.light-mode .nav-links a { color: #1a1a1a; }
+
+
+/* ===== FIX: Add missing styles for 50X features ===== */
+
+/* Ensure the body has proper background */
+body {
+    background: #0a0a0a;
+    color: #e5e5e5;
+}
+
+/* Fix for light mode */
+body.light-mode {
+    background: #f5f5f5 !important;
+    color: #1a1a1a !important;
+}
+body.light-mode .navbar {
+    background: rgba(255,255,255,0.98) !important;
+    border-bottom: 1px solid #e0dcd2 !important;
+}
+body.light-mode .nav-links a {
+    color: #1a1a1a !important;
+}
+body.light-mode .footer-col p,
+body.light-mode .footer-col a {
+    color: #555 !important;
+}
+body.light-mode .page-header {
+    background: #e8e3d8 !important;
+}
+body.light-mode .package-card {
+    background: #ffffff !important;
+    border: 1px solid #e8e3d8 !important;
+}
+body.light-mode .package-card h3 {
+    color: #1a1a1a !important;
+}
+body.light-mode .dest-card {
+    background: #ffffff !important;
+}
+body.light-mode .dest-info h3 {
+    color: #1a1a1a !important;
+}
+body.light-mode .dest-info p {
+    color: #555 !important;
+}
+body.light-mode .feature-card {
+    background: #ffffff !important;
+}
+body.light-mode .feature-card h3 {
+    color: #1a1a1a !important;
+}
+body.light-mode .service-card,
+body.light-mode .policy-card {
+    background: #ffffff !important;
+}
+body.light-mode .service-card h3,
+body.light-mode .policy-card h3 {
+    color: #1a1a1a !important;
+}
+body.light-mode .service-card p,
+body.light-mode .policy-card p {
+    color: #555 !important;
+}
+body.light-mode .service-list li,
+body.light-mode .policy-list li {
+    border-bottom: 1px solid #e8e3d8 !important;
+}
+body.light-mode .faq-item {
+    background: #f5f5f5 !important;
+}
+body.light-mode .faq-item p {
+    color: #555 !important;
+}
+body.light-mode .contact-card {
+    background: #f5f5f5 !important;
+}
+body.light-mode .contact-form-container {
+    background: #ffffff !important;
+}
+body.light-mode .form-wrapper {
+    background: #f5f5f5 !important;
+}
+body.light-mode .info-card {
+    background: #f5f5f5 !important;
+}
+body.light-mode .input-group input,
+body.light-mode .input-group select,
+body.light-mode .input-group textarea {
+    background: #ffffff !important;
+    color: #1a1a1a !important;
+}
+body.light-mode .calc-grid {
+    background: #ffffff !important;
+}
+body.light-mode .calc-results {
+    background: #f5f5f5 !important;
+}
+body.light-mode .calc-row input,
+body.light-mode .calc-row select {
+    background: #ffffff !important;
+    color: #1a1a1a !important;
+}
+body.light-mode .currency-wrapper {
+    background: #ffffff !important;
+}
+body.light-mode .currency-row input,
+body.light-mode .currency-row select {
+    background: #ffffff !important;
+    color: #1a1a1a !important;
+}
+body.light-mode .weather-card {
+    background: #ffffff !important;
+}
+body.light-mode .weather-card h4 {
+    color: #1a1a1a !important;
+}
+body.light-mode .packing-category {
+    background: #ffffff !important;
+}
+body.light-mode .packing-category label {
+    color: #555 !important;
+}
+body.light-mode .emergency-card {
+    background: #ffffff !important;
+}
+body.light-mode .emergency-card h4 {
+    color: #1a1a1a !important;
+}
+body.light-mode .blog-card {
+    background: #ffffff !important;
+}
+body.light-mode .blog-card .blog-content h4 {
+    color: #1a1a1a !important;
+}
+body.light-mode .blog-card .blog-content p {
+    color: #555 !important;
+}
+body.light-mode .itinerary-wrapper {
+    background: #ffffff !important;
+}
+body.light-mode .itinerary-inputs input {
+    background: #f5f5f5 !important;
+    color: #1a1a1a !important;
+}
+body.light-mode .itinerary-list {
+    background: #f5f5f5 !important;
+}
+body.light-mode .itinerary-item {
+    color: #555 !important;
+    border-bottom: 1px solid #e8e3d8 !important;
+}
+body.light-mode .lead-popup-content {
+    background: #ffffff !important;
+}
+body.light-mode .lead-popup-content h2 {
+    color: #1a1a1a !important;
+}
+body.light-mode .lead-popup-content p {
+    color: #555 !important;
+}
+body.light-mode .lead-popup-content input {
+    background: #f5f5f5 !important;
+    color: #1a1a1a !important;
+}
+body.light-mode .note-box {
+    background: #f5f5f5 !important;
+}
+body.light-mode .note-box strong {
+    color: #1a1a1a !important;
+}
+body.light-mode .cost-table {
+    background: #ffffff !important;
+}
+body.light-mode .cost-table td {
+    border-bottom: 1px solid #e8e3d8 !important;
+    color: #1a1a1a !important;
+}
+body.light-mode .cost-table tr:hover {
+    background: #f5f5f5 !important;
+}
+body.light-mode .summary-card {
+    background: #ffffff !important;
+}
+body.light-mode .summary-card .number {
+    color: #1a1a1a !important;
+}
+body.light-mode .filter-bar {
+    background: #f5f5f5 !important;
+}
+body.light-mode .filter-input input {
+    background: #ffffff !important;
+    color: #1a1a1a !important;
+}
+body.light-mode .filter-sort select {
+    background: #ffffff !important;
+    color: #1a1a1a !important;
+}
+body.light-mode .cost-header {
+    background: linear-gradient(135deg, #2a5e45, #1e3b2c) !important;
+}
+body.light-mode .policies-header {
+    background: linear-gradient(135deg, #2a5e45, #1e3b2c) !important;
+}
+body.light-mode .page-header {
+    background: #e8e3d8 !important;
+}
+body.light-mode .page-header h1 {
+    color: #1a1a1a !important;
+}
+body.light-mode .page-header p {
+    color: #555 !important;
+}
+body.light-mode .section-title {
+    color: #1a1a1a !important;
+}
+
+/* Fix for hero section overlay */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.4)), url('https://i0.wp.com/picjumbo.com/wp-content/uploads/beautiful-fall-nature-scenery-free-image.jpeg?w=2210&quality=70') !important;
+    background-size: cover !important;
+    background-position: center 30% !important;
+    min-height: 85vh !important;
+    display: flex !important;
+    align-items: center !important;
+    position: relative !important;
+    color: white !important;
+}
+
+/* Fix for AI chat messages */
+.ai-chat-messages {
+    padding: 30px;
+    min-height: 300px;
+    max-height: 500px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: #0a0a0a;
+}
+
+.ai-message {
+    max-width: 85%;
+    padding: 14px 20px;
+    border-radius: 18px;
+    font-size: 15px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    animation: fadeIn 0.3s ease;
+}
+
+.ai-bot {
+    background: #1a1a1a;
+    color: #e5e5e5;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+}
+
+.ai-user {
+    background: #D4AF37;
+    color: #0a0a0a;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+.ai-property-suggestion {
+    background: #1a1a1a;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 16px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+.ai-property-suggestion:hover {
+    border-color: #D4AF37;
+    transform: translateX(4px);
+}
+.ai-property-suggestion .prop-name {
+    color: #D4AF37;
+    font-weight: 700;
+    font-size: 16px;
+}
+.ai-property-suggestion .prop-details {
+    color: #aaa;
+    font-size: 14px;
+    margin: 6px 0 10px 0;
+}
+.ai-property-suggestion .view-btn {
+    background: #D4AF37;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 30px;
+    color: #0a0a0a;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
+}
+.ai-property-suggestion .view-btn:hover {
+    background: #c4a02e;
+    transform: scale(1.02);
+}
+
+/* Fix for page header */
+.page-header {
+    text-align: center;
+    padding: 60px 20px 20px;
+    background: #1a3a2a;
+}
+.page-header h1 {
+    color: white;
+    font-size: 2.5rem;
+}
+.page-header p {
+    color: #ccc;
+}
+
+/* Fix for cost-header */
+.cost-header {
+    background: linear-gradient(135deg, #1e3b2c, #2a5e45);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+.cost-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+.cost-header p {
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Fix for policies-header */
+.policies-header {
+    background: linear-gradient(135deg, #1e3b2c, #2a5e45);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+.policies-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+.policies-header p {
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
