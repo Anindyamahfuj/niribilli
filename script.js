@@ -361,24 +361,36 @@ window.addEventListener('scroll', function() {
     if (progressBar) progressBar.style.width = progress + '%';
 });
 
-// 7. THEME TOGGLE
+// 7. THEME TOGGLE (Fixed with Toast)
 const themeToggle = document.getElementById('themeToggle');
 if (themeToggle) {
+    // Load saved theme
     const currentTheme = localStorage.getItem('niribiliTheme');
     if (currentTheme === 'light') {
         document.body.classList.add('light-mode');
         themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
     }
+    
     themeToggle.addEventListener('click', function() {
         document.body.classList.toggle('light-mode');
+        
         if (document.body.classList.contains('light-mode')) {
             localStorage.setItem('niribiliTheme', 'light');
             this.innerHTML = '<i class="fas fa-sun"></i>';
-            showToast('🌞 Light mode activated', 'info');
+            // Show toast using the global function
+            if (typeof showToast === 'function') {
+                showToast('🌞 Light mode activated', 'info');
+            } else {
+                console.log('🌞 Light mode activated');
+            }
         } else {
             localStorage.setItem('niribiliTheme', 'dark');
             this.innerHTML = '<i class="fas fa-moon"></i>';
-            showToast('🌙 Dark mode activated', 'info');
+            if (typeof showToast === 'function') {
+                showToast('🌙 Dark mode activated', 'info');
+            } else {
+                console.log('🌙 Dark mode activated');
+            }
         }
     });
 }
