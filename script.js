@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     { name: "Ratargul", region: "Sylhet", price: 16000, image: "https://static.wixstatic.com/media/b9965b_f870463851e049dba796d9ea354cb29e~mv2.jpg/v1/fill/w_568,h_426,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/b9965b_f870463851e049dba796d9ea354cb29e~mv2.jpg", description: "Freshwater swamp forest" },
     { name: "Nijhum Dwip", region: "Noakhali", price: 21000, image: "https://upload.wikimedia.org/wikipedia/commons/2/21/Nijhum_Dwip.jpg", description: "Deer island & mangrove forest" },
     { name: "Lawachara", region: "Sylhet", price: 15000, image: "https://travelersdiarybd.wordpress.com/wp-content/uploads/2016/06/4787690186_b887b017d6_b.jpg", description: "Rainforest & gibbon sanctuary" },
-    { name: "Tanguar Haor", region: "Sunamganj", price: 23000, image: "hhttps://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/50/e2/9b/tanguar-haor-floating.jpg?w=1200&h=-1&s=1", description: "Ramsar wetland & migratory birds" },
+    { name: "Tanguar Haor", region: "Sunamganj", price: 23000, image: "https://www.travelmate.com.bd/wp-content/uploads/2019/06/Tanguar-Haor-Sunamganj-1024x683.jpg.webp", description: "Ramsar wetland & migratory birds" },
     { name: "Bisanakandi", region: "Sylhet", price: 18000, image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/d1/d2/01/bchnakandi.jpg?w=700&h=400&s=1", description: "Border view with India & rocky streams" },
     { name: "Madhabkunda", region: "Moulvibazar", price: 15000, image: "https://www.travelmate.com.bd/wp-content/uploads/2022/02/sylhet.jpg.webp", description: "Waterfall & lush greenery" }
   ];
