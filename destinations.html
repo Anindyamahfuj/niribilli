@@ -87,4 +87,53 @@
 </footer>
   <script src="script.js"></script>
 </body>
+  <!-- Mobile Navigation Toggle (for hamburger menu) -->
+<script>
+    // Create hamburger menu for mobile
+    document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelector('.nav-links');
+        const navContainer = document.querySelector('.nav-container');
+        
+        if (navContainer && navLinks && !document.querySelector('.hamburger')) {
+            const hamburger = document.createElement('button');
+            hamburger.className = 'hamburger';
+            hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            hamburger.style.cssText = `
+                display: none;
+                background: none;
+                border: none;
+                font-size: 28px;
+                color: #D4AF37;
+                cursor: pointer;
+                padding: 8px;
+            `;
+            
+            // Only show on mobile
+            if (window.innerWidth <= 768) {
+                hamburger.style.display = 'block';
+            }
+            window.addEventListener('resize', function() {
+                if (window.innerWidth <= 768) {
+                    hamburger.style.display = 'block';
+                } else {
+                    hamburger.style.display = 'none';
+                    navLinks.classList.remove('open');
+                }
+            });
+            
+            navContainer.insertBefore(hamburger, navLinks);
+            
+            hamburger.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navLinks.classList.toggle('open');
+            });
+            
+            document.addEventListener('click', function(e) {
+                if (!navContainer.contains(e.target)) {
+                    navLinks.classList.remove('open');
+                }
+            });
+        }
+    });
+</script>
 </html>
