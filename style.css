@@ -1912,3 +1912,25 @@ img {
         padding: 14px !important;
     }
 }
+
+
+/* ===== LOGO STYLES ===== */
+.logo .logo-svg {
+    max-height: 50px;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Logo size for mobile */
+@media (max-width: 480px) {
+    .logo .logo-svg {
+        max-height: 35px !important;
+    }
+}
