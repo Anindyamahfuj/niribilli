@@ -1,7 +1,7 @@
 // script.js - Complete with 20+ destinations and working images in search results
 document.addEventListener('DOMContentLoaded', function() {
 
-  // ========== 20+ DESTINATIONS DATABASE WITH WORKING IMAGES ==========
+  // ========== 20+ DESTINATIONS DATABASE WITH DOUBLED PRICES ==========
   const destinations = [
     { name: "Cox's Bazar", region: "Chittagong", price: 22000, image: "https://images.pexels.com/photos/18211668/pexels-photo-18211668/free-photo-of-sunset-over-beach-with-people-walking-and-palm-trees.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "World's longest natural sea beach with golden sands" },
     { name: "Sundarbans", region: "Khulna", price: 29000, image: "https://images.pexels.com/photos/2340970/pexels-photo-2340970.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop", description: "Mangrove forest & Royal Bengal Tiger sanctuary" },
@@ -205,6 +205,25 @@ document.addEventListener('DOMContentLoaded', function() {
 // 50X BETTER – NIRIBILI TRAVELS FEATURES
 // ============================================
 
+// TOAST FUNCTION (Global)
+function showToast(message, type = 'info') {
+    const container = document.getElementById('toastContainer');
+    if (!container) {
+        const newContainer = document.createElement('div');
+        newContainer.className = 'toast-container';
+        newContainer.id = 'toastContainer';
+        document.body.appendChild(newContainer);
+    }
+    const toastContainer = document.getElementById('toastContainer');
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    toast.textContent = message;
+    toastContainer.appendChild(toast);
+    setTimeout(() => {
+        if (toast.parentNode) toast.remove();
+    }, 4000);
+}
+
 // 1. LEAD POPUP
 document.addEventListener('DOMContentLoaded', function() {
     const leadTriggers = document.querySelectorAll('#leadTrigger');
@@ -361,49 +380,26 @@ window.addEventListener('scroll', function() {
     if (progressBar) progressBar.style.width = progress + '%';
 });
 
-// 7. THEME TOGGLE (Fixed with Toast)
+// 7. THEME TOGGLE
 const themeToggle = document.getElementById('themeToggle');
 if (themeToggle) {
-    // Load saved theme
     const currentTheme = localStorage.getItem('niribiliTheme');
     if (currentTheme === 'light') {
         document.body.classList.add('light-mode');
         themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
     }
-    
     themeToggle.addEventListener('click', function() {
         document.body.classList.toggle('light-mode');
-        
         if (document.body.classList.contains('light-mode')) {
             localStorage.setItem('niribiliTheme', 'light');
             this.innerHTML = '<i class="fas fa-sun"></i>';
-            // Show toast using the global function
-            if (typeof showToast === 'function') {
-                showToast('🌞 Light mode activated', 'info');
-            } else {
-                console.log('🌞 Light mode activated');
-            }
+            showToast('🌞 Light mode activated', 'info');
         } else {
             localStorage.setItem('niribiliTheme', 'dark');
             this.innerHTML = '<i class="fas fa-moon"></i>';
-            if (typeof showToast === 'function') {
-                showToast('🌙 Dark mode activated', 'info');
-            } else {
-                console.log('🌙 Dark mode activated');
-            }
+            showToast('🌙 Dark mode activated', 'info');
         }
     });
-}
-
-// 8. TOAST FUNCTION
-function showToast(message, type = 'info') {
-    const container = document.getElementById('toastContainer');
-    if (!container) return;
-    const toast = document.createElement('div');
-    toast.className = `toast ${type}`;
-    toast.textContent = message;
-    container.appendChild(toast);
-    setTimeout(() => toast.remove(), 4000);
 }
 
 console.log('🚀 50X Better – Niribili Travels features loaded!');
