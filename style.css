@@ -1271,6 +1271,90 @@ body.light-mode .search-result-card {
     color: #e67e22 !important;
 }
 
+
+
+/* ===== FIX: Cost Table Text Visibility ===== */
+.cost-table-wrapper {
+    background: #ffffff;
+    border-radius: 28px;
+    overflow: hidden;
+}
+
+.cost-table {
+    background: #ffffff;
+    color: #1a1a1a !important;
+}
+
+.cost-table td,
+.cost-table th {
+    color: #1a1a1a !important;
+}
+
+.cost-table .price-highlight {
+    color: #e67e22 !important;
+}
+
+.cost-table .profit-positive {
+    color: #2e7d32 !important;
+}
+
+.cost-table td strong {
+    color: #1a1a1a !important;
+}
+
+/* Fix filter bar text */
+.filter-bar {
+    background: #f5f5f5 !important;
+    color: #1a1a1a !important;
+}
+
+.filter-bar input,
+.filter-bar select {
+    color: #1a1a1a !important;
+    background: #ffffff !important;
+}
+
+.filter-bar input::placeholder {
+    color: #999 !important;
+}
+
+/* Fix summary cards */
+.summary-card {
+    background: #ffffff !important;
+    color: #1a1a1a !important;
+}
+
+.summary-card .number {
+    color: #1a1a1a !important;
+}
+
+.summary-card p {
+    color: #555 !important;
+}
+
+.summary-card small {
+    color: #888 !important;
+}
+
+/* Fix note box */
+.note-box {
+    background: #fff8e7 !important;
+    color: #1a1a1a !important;
+}
+
+.note-box strong {
+    color: #1a1a1a !important;
+}
+
+/* Fix cost header */
+.cost-header {
+    color: white !important;
+}
+
+.cost-header h1,
+.cost-header p {
+    color: white !important;
+}
 .cost-table .profit-positive {
     color: #2e7d32 !important;
 }
