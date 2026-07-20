@@ -9,20 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
-    .cost-table td,
-    .cost-table th,
-    .cost-table .price-highlight,
-    .cost-table .profit-positive,
-    .cost-table td strong {
-        color: #1a1a1a !important;
-    }
-    .cost-table .price-highlight {
-        color: #e67e22 !important;
-    }
-    .cost-table .profit-positive {
-        color: #2e7d32 !important;
-    }
-
     /* Additional styles for cost calculator page */
     .cost-header {
       background: linear-gradient(135deg, #1e3b2c, #2a5e45);
@@ -98,6 +84,7 @@
     .cost-table td {
       padding: 15px;
       border-bottom: 1px solid #f0e7de;
+      color: #1a1a1a;
     }
     .cost-table tr:hover {
       background: #fefcf8;
@@ -172,7 +159,7 @@
         <li><a href="packages.html">Packages</a></li>
         <li><a href="rent.html">Rent & Book</a></li>
         <li><a href="cost.html" class="active">Price distribution</a></li>
-         <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
         <li><a href="policies.html">Services & Policies</a></li>
       </ul>
       <div class="nav-actions">
@@ -180,14 +167,14 @@
       </div>
     </div>
   </nav>
-<div class="toast-container" id="toastContainer"></div>
+  <div class="toast-container" id="toastContainer"></div>
+  <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
+
   <section class="cost-header">
     <h1><i class="fas fa-calculator"></i> Trip Price breakdown</h1>
     <p>See the complete breakdown — what you pay vs. what it costs us. 100% transparent pricing.</p>
   </section>
 
-<button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></button>
-  
   <div class="calculator-container">
     <div class="filter-bar">
       <div class="filter-input">
@@ -258,33 +245,42 @@
       <div class="footer-col"><h4>Quick links</h4><a href="destinations.html">Destinations</a><a href="packages.html">Tour Packages</a><a href="rent.html">Rent & Bookings</a><a href="cost.html">Cost Calculator</a></div>
       <div class="footer-col"><h4>Support</h4><p>+880 1234 567890</p><p>hello@niribili.travel</p></div>
     </div>
+    <div class="company-concern">
+      <div class="concern-divider"></div>
+      <div class="concern-content">
+        <p class="concern-text"><i class="fas fa-building"></i> NIRIBILLI is a concern of <strong>SAM Company</strong></p>
+        <a href="https://sambd.vercel.app" target="_blank" class="concern-link" rel="noopener noreferrer">
+          <i class="fas fa-external-link-alt"></i> Visit SAM Company Website →
+        </a>
+      </div>
+    </div>
     <div class="footer-bottom">© 2025 Niribili — transparent & responsible travel</div>
   </footer>
   <script src="script.js"></script>
   <script>
-    // Cost data with logical breakdowns (BDT per person for 2N/3D trip)
-   const costData = [
-  { name: "Cox's Bazar", region: "Chittagong", transport: 6000, hotel: 6000, food: 3000, local: 2000, guide: 1000, price: 22000 },
-  { name: "Sundarbans", region: "Khulna", transport: 8000, hotel: 8000, food: 4000, local: 3000, guide: 1600, price: 29000 },
-  { name: "Sylhet", region: "Sylhet", transport: 5000, hotel: 5000, food: 2400, local: 1600, guide: 800, price: 18000 },
-  { name: "Bandarban", region: "Hill Tracts", transport: 7000, hotel: 6400, food: 3000, local: 2400, guide: 1000, price: 24000 },
-  { name: "Sajek Valley", region: "Rangamati", transport: 7600, hotel: 7000, food: 3200, local: 2600, guide: 1200, price: 27000 },
-  { name: "Rangamati", region: "Hill Tracts", transport: 6400, hotel: 5600, food: 2800, local: 2000, guide: 900, price: 21000 },
-  { name: "St. Martin's Island", region: "Bay of Bengal", transport: 10000, hotel: 9000, food: 4000, local: 3000, guide: 1400, price: 32000 },
-  { name: "Kuakata Beach", region: "Barisal", transport: 5600, hotel: 5000, food: 2600, local: 1800, guide: 800, price: 19000 },
-  { name: "Srimangal", region: "Sylhet", transport: 4800, hotel: 4600, food: 2200, local: 1400, guide: 800, price: 17000 },
-  { name: "Paharpur", region: "Naogaon", transport: 4400, hotel: 4000, food: 2000, local: 1600, guide: 800, price: 16000 },
-  { name: "Mahasthangarh", region: "Bogra", transport: 4000, hotel: 3600, food: 1800, local: 1400, guide: 700, price: 15000 },
-  { name: "Sonargaon", region: "Dhaka", transport: 3000, hotel: 3200, food: 1600, local: 1000, guide: 600, price: 13000 },
-  { name: "Bagerhat", region: "Khulna", transport: 4600, hotel: 4200, food: 2000, local: 1600, guide: 800, price: 17000 },
-  { name: "Jaflong", region: "Sylhet", transport: 5200, hotel: 4800, food: 2200, local: 1600, guide: 800, price: 18000 },
-  { name: "Ratargul", region: "Sylhet", transport: 4400, hotel: 4000, food: 2000, local: 1400, guide: 800, price: 16000 },
-  { name: "Nijhum Dwip", region: "Noakhali", transport: 6000, hotel: 5600, food: 2600, local: 2000, guide: 900, price: 21000 },
-  { name: "Lawachara", region: "Sylhet", transport: 4000, hotel: 3600, food: 1800, local: 1200, guide: 700, price: 15000 },
-  { name: "Tanguar Haor", region: "Sunamganj", transport: 7000, hotel: 6000, food: 2800, local: 2000, guide: 1000, price: 23000 },
-  { name: "Bisanakandi", region: "Sylhet", transport: 5200, hotel: 4800, food: 2200, local: 1600, guide: 800, price: 18000 },
-  { name: "Madhabkunda", region: "Moulvibazar", transport: 4000, hotel: 3600, food: 1800, local: 1400, guide: 700, price: 15000 }
-];
+    // Cost data with logical breakdowns (BDT per person for 2N/3D trip) - DOUBLED PRICES
+    const costData = [
+      { name: "Cox's Bazar", region: "Chittagong", transport: 6000, hotel: 6000, food: 3000, local: 2000, guide: 1000, price: 22000 },
+      { name: "Sundarbans", region: "Khulna", transport: 8000, hotel: 8000, food: 4000, local: 3000, guide: 1600, price: 29000 },
+      { name: "Sylhet", region: "Sylhet", transport: 5000, hotel: 5000, food: 2400, local: 1600, guide: 800, price: 18000 },
+      { name: "Bandarban", region: "Hill Tracts", transport: 7000, hotel: 6400, food: 3000, local: 2400, guide: 1000, price: 24000 },
+      { name: "Sajek Valley", region: "Rangamati", transport: 7600, hotel: 7000, food: 3200, local: 2600, guide: 1200, price: 27000 },
+      { name: "Rangamati", region: "Hill Tracts", transport: 6400, hotel: 5600, food: 2800, local: 2000, guide: 900, price: 21000 },
+      { name: "St. Martin's Island", region: "Bay of Bengal", transport: 10000, hotel: 9000, food: 4000, local: 3000, guide: 1400, price: 32000 },
+      { name: "Kuakata Beach", region: "Barisal", transport: 5600, hotel: 5000, food: 2600, local: 1800, guide: 800, price: 19000 },
+      { name: "Srimangal", region: "Sylhet", transport: 4800, hotel: 4600, food: 2200, local: 1400, guide: 800, price: 17000 },
+      { name: "Paharpur", region: "Naogaon", transport: 4400, hotel: 4000, food: 2000, local: 1600, guide: 800, price: 16000 },
+      { name: "Mahasthangarh", region: "Bogra", transport: 4000, hotel: 3600, food: 1800, local: 1400, guide: 700, price: 15000 },
+      { name: "Sonargaon", region: "Dhaka", transport: 3000, hotel: 3200, food: 1600, local: 1000, guide: 600, price: 13000 },
+      { name: "Bagerhat", region: "Khulna", transport: 4600, hotel: 4200, food: 2000, local: 1600, guide: 800, price: 17000 },
+      { name: "Jaflong", region: "Sylhet", transport: 5200, hotel: 4800, food: 2200, local: 1600, guide: 800, price: 18000 },
+      { name: "Ratargul", region: "Sylhet", transport: 4400, hotel: 4000, food: 2000, local: 1400, guide: 800, price: 16000 },
+      { name: "Nijhum Dwip", region: "Noakhali", transport: 6000, hotel: 5600, food: 2600, local: 2000, guide: 900, price: 21000 },
+      { name: "Lawachara", region: "Sylhet", transport: 4000, hotel: 3600, food: 1800, local: 1200, guide: 700, price: 15000 },
+      { name: "Tanguar Haor", region: "Sunamganj", transport: 7000, hotel: 6000, food: 2800, local: 2000, guide: 1000, price: 23000 },
+      { name: "Bisanakandi", region: "Sylhet", transport: 5200, hotel: 4800, food: 2200, local: 1600, guide: 800, price: 18000 },
+      { name: "Madhabkunda", region: "Moulvibazar", transport: 4000, hotel: 3600, food: 1800, local: 1400, guide: 700, price: 15000 }
+    ];
 
     // Calculate total cost and profit for each
     const enrichedData = costData.map(d => {
@@ -354,20 +350,5 @@
     // Initial render
     filterAndSort();
   </script>
-  
-
-  <!-- COMPANY CONCERN INFORMATION -->
-  <div class="company-concern">
-    <div class="concern-divider"></div>
-    <div class="concern-content">
-      <p class="concern-text"><i class="fas fa-building"></i> NIRIBILLI is a concern of <strong>SAM Company</strong></p>
-      <a href="https://sambd.vercel.app" target="_blank" class="concern-link" rel="noopener noreferrer">
-        <i class="fas fa-external-link-alt"></i> Visit SAM Company Website →
-      </a>
-    </div>
-  </div>
-
-  <div class="footer-bottom">© 2025 Niribili — responsible & transparent travel</div>
-</footer>
 </body>
 </html>
