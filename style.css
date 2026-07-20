@@ -1255,3 +1255,22 @@ body.light-mode .search-result-card {
   .calc-grid { grid-template-columns: 1fr; }
   .currency-row { flex-direction: column; }
 }
+
+
+
+/* Fix white text visibility */
+.cost-table td,
+.cost-table th,
+.cost-table tr,
+.cost-table .price-highlight,
+.cost-table .profit-positive {
+    color: #1a1a1a !important;
+}
+
+.cost-table .price-highlight {
+    color: #e67e22 !important;
+}
+
+.cost-table .profit-positive {
+    color: #2e7d32 !important;
+}
