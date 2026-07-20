@@ -247,28 +247,28 @@
   <script src="script.js"></script>
   <script>
     // Cost data with logical breakdowns (BDT per person for 2N/3D trip)
-    const costData = [
-      { name: "Cox's Bazar", region: "Chittagong", transport: 3000, hotel: 3000, food: 1500, local: 1000, guide: 500, price: 11000 },
-      { name: "Sundarbans", region: "Khulna", transport: 4000, hotel: 4000, food: 2000, local: 1500, guide: 800, price: 14500 },
-      { name: "Sylhet", region: "Sylhet", transport: 2500, hotel: 2500, food: 1200, local: 800, guide: 400, price: 9000 },
-      { name: "Bandarban", region: "Hill Tracts", transport: 3500, hotel: 3200, food: 1500, local: 1200, guide: 500, price: 12000 },
-      { name: "Sajek Valley", region: "Rangamati", transport: 3800, hotel: 3500, food: 1600, local: 1300, guide: 600, price: 13500 },
-      { name: "Rangamati", region: "Hill Tracts", transport: 3200, hotel: 2800, food: 1400, local: 1000, guide: 450, price: 10500 },
-      { name: "St. Martin's Island", region: "Bay of Bengal", transport: 5000, hotel: 4500, food: 2000, local: 1500, guide: 700, price: 16000 },
-      { name: "Kuakata Beach", region: "Barisal", transport: 2800, hotel: 2500, food: 1300, local: 900, guide: 400, price: 9500 },
-      { name: "Srimangal", region: "Sylhet", transport: 2400, hotel: 2300, food: 1100, local: 700, guide: 400, price: 8500 },
-      { name: "Paharpur", region: "Naogaon", transport: 2200, hotel: 2000, food: 1000, local: 800, guide: 400, price: 8000 },
-      { name: "Mahasthangarh", region: "Bogra", transport: 2000, hotel: 1800, food: 900, local: 700, guide: 350, price: 7500 },
-      { name: "Sonargaon", region: "Dhaka", transport: 1500, hotel: 1600, food: 800, local: 500, guide: 300, price: 6500 },
-      { name: "Bagerhat", region: "Khulna", transport: 2300, hotel: 2100, food: 1000, local: 800, guide: 400, price: 8500 },
-      { name: "Jaflong", region: "Sylhet", transport: 2600, hotel: 2400, food: 1100, local: 800, guide: 400, price: 9000 },
-      { name: "Ratargul", region: "Sylhet", transport: 2200, hotel: 2000, food: 1000, local: 700, guide: 400, price: 8000 },
-      { name: "Nijhum Dwip", region: "Noakhali", transport: 3000, hotel: 2800, food: 1300, local: 1000, guide: 450, price: 10500 },
-      { name: "Lawachara", region: "Sylhet", transport: 2000, hotel: 1800, food: 900, local: 600, guide: 350, price: 7500 },
-      { name: "Tanguar Haor", region: "Sunamganj", transport: 3500, hotel: 3000, food: 1400, local: 1000, guide: 500, price: 11500 },
-      { name: "Bisanakandi", region: "Sylhet", transport: 2600, hotel: 2400, food: 1100, local: 800, guide: 400, price: 9000 },
-      { name: "Madhabkunda", region: "Moulvibazar", transport: 2000, hotel: 1800, food: 900, local: 700, guide: 350, price: 7500 }
-    ];
+   const costData = [
+  { name: "Cox's Bazar", region: "Chittagong", transport: 6000, hotel: 6000, food: 3000, local: 2000, guide: 1000, price: 22000 },
+  { name: "Sundarbans", region: "Khulna", transport: 8000, hotel: 8000, food: 4000, local: 3000, guide: 1600, price: 29000 },
+  { name: "Sylhet", region: "Sylhet", transport: 5000, hotel: 5000, food: 2400, local: 1600, guide: 800, price: 18000 },
+  { name: "Bandarban", region: "Hill Tracts", transport: 7000, hotel: 6400, food: 3000, local: 2400, guide: 1000, price: 24000 },
+  { name: "Sajek Valley", region: "Rangamati", transport: 7600, hotel: 7000, food: 3200, local: 2600, guide: 1200, price: 27000 },
+  { name: "Rangamati", region: "Hill Tracts", transport: 6400, hotel: 5600, food: 2800, local: 2000, guide: 900, price: 21000 },
+  { name: "St. Martin's Island", region: "Bay of Bengal", transport: 10000, hotel: 9000, food: 4000, local: 3000, guide: 1400, price: 32000 },
+  { name: "Kuakata Beach", region: "Barisal", transport: 5600, hotel: 5000, food: 2600, local: 1800, guide: 800, price: 19000 },
+  { name: "Srimangal", region: "Sylhet", transport: 4800, hotel: 4600, food: 2200, local: 1400, guide: 800, price: 17000 },
+  { name: "Paharpur", region: "Naogaon", transport: 4400, hotel: 4000, food: 2000, local: 1600, guide: 800, price: 16000 },
+  { name: "Mahasthangarh", region: "Bogra", transport: 4000, hotel: 3600, food: 1800, local: 1400, guide: 700, price: 15000 },
+  { name: "Sonargaon", region: "Dhaka", transport: 3000, hotel: 3200, food: 1600, local: 1000, guide: 600, price: 13000 },
+  { name: "Bagerhat", region: "Khulna", transport: 4600, hotel: 4200, food: 2000, local: 1600, guide: 800, price: 17000 },
+  { name: "Jaflong", region: "Sylhet", transport: 5200, hotel: 4800, food: 2200, local: 1600, guide: 800, price: 18000 },
+  { name: "Ratargul", region: "Sylhet", transport: 4400, hotel: 4000, food: 2000, local: 1400, guide: 800, price: 16000 },
+  { name: "Nijhum Dwip", region: "Noakhali", transport: 6000, hotel: 5600, food: 2600, local: 2000, guide: 900, price: 21000 },
+  { name: "Lawachara", region: "Sylhet", transport: 4000, hotel: 3600, food: 1800, local: 1200, guide: 700, price: 15000 },
+  { name: "Tanguar Haor", region: "Sunamganj", transport: 7000, hotel: 6000, food: 2800, local: 2000, guide: 1000, price: 23000 },
+  { name: "Bisanakandi", region: "Sylhet", transport: 5200, hotel: 4800, food: 2200, local: 1600, guide: 800, price: 18000 },
+  { name: "Madhabkunda", region: "Moulvibazar", transport: 4000, hotel: 3600, food: 1800, local: 1400, guide: 700, price: 15000 }
+];
 
     // Calculate total cost and profit for each
     const enrichedData = costData.map(d => {
